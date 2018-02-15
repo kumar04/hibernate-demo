@@ -1,5 +1,19 @@
- What is the use of @Transaction.
-I think transactions belong on the Service layer. It's the one that knows about units of work and use cases. It's the right answer if you have several DAOs injected into a Service that need to work together in a single transaction.
-
+Q.What is the use of @Transaction.
+I think transactions belong on the Service layer. It's the one that knows about units of work and use cases. It's the right answer if you 
+have several DAOs injected into a Service that need to work together in a single transaction.
 ACID properties of transactions
 ACID Properties. A transaction is a very small unit of work.
+Q. What is Dialect?
+ some point hibernate has to use database specific SQL. Hibernate uses "dialect" configuration to know which database you are using so 
+ that it can switch to the database specific SQL generator code 
+2. Where you write configuration detail?
+hibernate-cfg.xml
+3. What is HQL? Have you ever used HQL in your project?
+Hibernate query language.yes
+4. How to use L2 cache? 
+add ecache inject property
+add ecache.xml file which is add maxtime,mintime,connection pool
+5. Difference between l1 and l2 cache and where they are associate?
+session,sessionfactory
+6. Difference between merge and update?
+if entity is not present in session ,it throws exception for update method
