@@ -1,0 +1,5 @@
+ What is the use of @Transaction.
+I think transactions belong on the Service layer. It's the one that knows about units of work and use cases. It's the right answer if you have several DAOs injected into a Service that need to work together in a single transaction.
+
+ACID properties of transactions
+ACID Properties. A transaction is a very small unit of work.
